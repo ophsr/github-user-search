@@ -1,0 +1,30 @@
+.home-content {
+    padding: 120px 740px 265px 120px;
+}
+
+.home-title {
+    padding-bottom: 24px;
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #062847;
+}
+
+
+.home-description-content {
+    width: 612px;
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+    margin: 0;
+    padding-bottom:50px ;
+    .highlighted{
+        color: var(--primary);
+    }
+}
