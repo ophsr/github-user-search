@@ -1,7 +1,9 @@
 import Button from 'core/components/Button';
 import { makeRequest } from 'core/utils/request';
+import { UserGitHub } from 'core/utils/UserGitHub';
 import React, { useState } from 'react';
 import Loader from './components/Loaders/Loader';
+import ProfileInfo from './components/ProfileInfo';
 import './style.scss'
 
 
@@ -9,8 +11,7 @@ const Search = () => {
 
     const [user, setUser] = useState('')
     const [isLoading, setIsLoading] = useState(false);
-    const [profile, setProfile] = useState();
-    // const [request, setRequest] = useState(false);
+    const [profile, setProfile] = useState<UserGitHub>();
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setUser(event.target.value);
@@ -26,8 +27,6 @@ const Search = () => {
                 })
         }
     }
-
-
 
     return (
         <div>
@@ -45,7 +44,7 @@ const Search = () => {
                 </div>
             </div>
             <div className="profile-content">
-                {isLoading ? <Loader /> : (profile !== undefined ? <h1>sucesso</h1> : <span></span>)}
+                {isLoading ? <Loader /> : (profile !== undefined ? <ProfileInfo user={profile} /> : <span></span>)}
             </div>
         </div>
     )

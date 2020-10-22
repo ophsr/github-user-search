@@ -6,6 +6,6 @@ export type UserGitHub = {
     company:string;
     blog: string;
     location:string;
-    created_at: Date;
+    created_at: string;
     login:string
 }
